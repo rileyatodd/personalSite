@@ -6,3 +6,7 @@ body {
 a {
   color: #00B7FF;
 }
+
+.highlighted {
+	color: rgb(0,100,255);
+}

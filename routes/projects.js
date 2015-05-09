@@ -1,7 +1,7 @@
 var express = require('express'),
   router = express.Router(),
   mongo = require('mongodb'),
-  db = require('monk')('localhost/personalSiteDb');
+  // db = require('monk')('localhost/personalSiteDb');
 
 /* GET home page. */
 router.get('/:projectQuery', function(req, res, next) {

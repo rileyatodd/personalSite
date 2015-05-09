@@ -19,7 +19,7 @@ router.get('/:projectQuery', function(req, res, next) {
     .complete(function(){
       res.render('project', {});
     });
-
+  res.render('project', {name: "test"});
 });
 
 module.exports = router;

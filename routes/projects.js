@@ -14,7 +14,10 @@ router.get('/:projectQuery', function(req, res, next) {
       res.render('project', project);
     })
     .error(function(err) {
-      res.render('error', err);
+      res.render('project', {});
+    })
+    .complete(function(){
+      res.render('project', {});
     });
 
 });

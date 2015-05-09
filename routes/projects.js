@@ -12,8 +12,11 @@ router.get('/:projectQuery', function(req, res, next) {
     .success(function(docs) {
       project = docs[0];
       res.render('project', project);
+    })
+    .error(function(err) {
+      res.render('error', err);
     });
-    
+
 });
 
 module.exports = router;

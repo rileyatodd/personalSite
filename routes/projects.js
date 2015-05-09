@@ -1,10 +1,19 @@
-var express = require('express');
-var router = express.Router();
-// var db = require('monk');
+var express = require('express'),
+  router = express.Router(),
+  mongo = require('mongodb'),
+  db = require('monk')('localhost/personalSiteDb');
 
 /* GET home page. */
-router.get('/:projectName', function(req, res, next) {
-  res.render('project', {projectName: req.params.projectName})
+router.get('/:projectQuery', function(req, res, next) {
+  // res.render('project', {projectName: req.params.projectQuery});
+  var projects = db.get('projects');
+  var project;
+  projects.find({path: req.params.projectQuery})
+    .success(function(docs) {
+      project = docs[0];
+      res.render('project', project);
+    });
+    
 });
 
 module.exports = router;

@@ -10,3 +10,9 @@ a {
 .highlighted {
 	color: rgb(0,100,255);
 }
+
+@media print {
+  a[href]:after {
+    content: none !important;
+  }
+}

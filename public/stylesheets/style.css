@@ -1,16 +1,42 @@
 body {
-  padding: 50px;
+  padding-top: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: #00B7FF;
 }
 
 .highlighted {
 	color: rgb(0,100,255);
 }
 
+.navbar-default,
+.navbar-nav li .dropdown-menu,
+.navbar-nav li .dropdown-menu .open {
+  background-color: #047CB0;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #FFF;
+}
+
+.navbar-default .navbar-toggle:hover .icon-bar,
+.navbar-default .navbar-toggle:focus .icon-bar {
+  background-color: #000;
+}
+
+.navbar .navbar-brand,
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:active,
+.navbar-default .navbar-nav li a,
+.navbar-default .navbar-nav li a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu li a,
+.navbar-default .navbar-nav li a:focus {
+  color: #FFF;
+}
+
+.navbar-default .navbar-nav .open li a:hover {
+  color: #262626;
+}
+
+/*Don't color links when printing*/
 @media print {
   a[href]:after {
     content: none !important;

@@ -18,4 +18,8 @@ router.get('/about', function(req, res, next) {
   res.render('about');
 });
 
+router.get('/chicago-food-safety', function(req, res, next) {
+  res.render('chicago-food-safety');
+})
+
 module.exports = router;

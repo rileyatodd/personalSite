@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<root>
+	<item>
+		<name>Right Command makes ijkl work as arrow keys</name>
+		<appendix>Change Command_R+I to arrow up</appendix>
+		<appendix>Change Command_R+J to arrow left</appendix>
+		<appendix>Change Command_R+K to arrow down</appendix>
+		<appendix>Change Command_R+L to arrow right</appendix>
+		<identifier>remap.commandijkl2arrows</identifier>
+		<autogen>__KeyToKey__ KeyCode::I, ModifierFlag::COMMAND_R, KeyCode::CURSOR_UP</autogen>
+		<autogen>__KeyToKey__ KeyCode::J, ModifierFlag::COMMAND_R, KeyCode::CURSOR_LEFT</autogen>
+		<autogen>__KeyToKey__ KeyCode::K, ModifierFlag::COMMAND_R, KeyCode::CURSOR_DOWN</autogen>
+		<autogen>__KeyToKey__ KeyCode::L, ModifierFlag::COMMAND_R, KeyCode::CURSOR_RIGHT</autogen>
+	</item>
+	<item>
+		<name>Disable Arrow Keys</name>
+		<appendix>Map Left Arrow Key to null</appendix>
+		<appendix>Map Right Arrow Key to null</appendix>
+		<appendix>Map Up Arrow Key to null</appendix>
+		<appendix>Map Down Arrow Key to null</appendix>
+		<identifier>remap.disablearrows</identifier>
+		<autogen>__KeyToKey__ KeyCode::CURSOR_LEFT, KeyCode::VK_NONE</autogen>
+		<autogen>__KeyToKey__ KeyCode::CURSOR_RIGHT, KeyCode::VK_NONE</autogen>
+		<autogen>__KeyToKey__ KeyCode::CURSOR_UP, KeyCode::VK_NONE</autogen>
+		<autogen>__KeyToKey__ KeyCode::CURSOR_DOWN, KeyCode::VK_NONE</autogen>
+	</item>
+</root>

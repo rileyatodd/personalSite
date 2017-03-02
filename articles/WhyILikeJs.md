@@ -1,0 +1,2 @@
+- changing too much vs improving at a fast pace
+- new features make dynamic nature shine

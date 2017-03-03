@@ -1,45 +1,95 @@
 body {
-  padding-top: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
 }
 
-.highlighted {
-	color: rgb(0,100,255);
+.navbar {
+  background-color: #047CB0;
+  color: #FFF;
+  overflow: auto;
 }
 
-.navbar-default,
-.navbar-nav li .dropdown-menu,
-.navbar-nav li .dropdown-menu .open {
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar .navbar-brand {
+  font-size: 18px;
+  float: left;
+  padding: 15px;
+}
+
+.navbar-right {
+  float: right;
+  text-align: center;
+  padding: 15px;
+}
+
+.navbar ul {
   background-color: #047CB0;
 }
 
-.navbar-default .navbar-toggle .icon-bar {
+.navbar li {
+  padding: 15px;
+}
+
+.dropdown ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dropdown.engaged ul {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  width: 200px;
+}
+
+.dropdown.engaged.open ul {
+  display: block;
+  box-shadow: 0 0 4px 4px #61c7f5;
+}
+
+.navbar li {
+  display: inline;
+}
+
+.dropdown.engaged li {
+  display: block;
+  padding: 10px 10px;
+  cursor: pointer;
+}
+
+.dropdown.engaged li:hover {
   background-color: #FFF;
 }
 
-.navbar-default .navbar-toggle:hover .icon-bar,
-.navbar-default .navbar-toggle:focus .icon-bar {
-  background-color: #000;
+.dropdown.engaged li:hover a {
+  color: #047CB0;
 }
 
-.navbar .navbar-brand,
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:active,
-.navbar-default .navbar-brand:focus,
-.navbar-default .navbar-nav li a,
-.navbar-default .navbar-nav li a:hover,
-.navbar-default .navbar-nav .open .dropdown-menu li a,
-.navbar-default .navbar-nav li a:focus {
-  color: #FFF;
+.dropdown-toggle {
+  display: none;
 }
 
-.navbar-default .navbar-nav .open li a:hover {
-  color: #262626;
+.dropdown.engaged .dropdown-toggle {
+  display: block;
+  cursor: pointer;
 }
 
-/*Don't color links when printing*/
-@media print {
-  a[href]:after {
-    content: none !important;
-  }
+.dropdown.engaged .dropdown-toggle:after {
+  content: '\25BC';
+}
+
+.dropdown.engaged.open .dropdown-toggle:after {
+  content: '\25B2'
+}
+
+.container {
+  padding: 10px;
+  margin: 10px auto;
+  max-width: 720px;
 }

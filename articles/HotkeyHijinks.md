@@ -1,6 +1,6 @@
 ## Hotkey Hijinks
 
-Even before I started programming I've always been a fan of hotkeys, wether in games or any other program like Excel. I remember spending hours agonizing over the ideal hotkey setup for each of my World of Warcraft characters. The reason hotkeys appealed to me so much was that they were efficient. I hated when I wanted to react to something quickly but the reaction I wanted wasn't already engrained in my muscle memory.
+Even before I started programming I've always been a fan of hotkeys, whether in games or any other program like Excel. I remember spending hours agonizing over the ideal hotkey setup for each of my World of Warcraft characters. The reason hotkeys appealed to me so much was that they were efficient. I hated when I wanted to react to something quickly but the reaction I wanted wasn't already engrained in my muscle memory.
 
 Now that I am a full time software engineer I feel even more justified in finding the perfect combination of keyboard layout and hotkeys. Spending 8 hours a day at a computer makes you yearn for more efficient ways to use it. When I first learned about vi/vim and how fast people could fly around a text file without their hands leaving the home row on the keyboard I knew I had to step my game up.
 

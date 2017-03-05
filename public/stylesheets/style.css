@@ -50,7 +50,7 @@ body {
 
 .dropdown.engaged.open ul {
   display: block;
-  box-shadow: 0 0 4px 4px #61c7f5;
+  border: 1px solid #61c7f5;
 }
 
 .navbar li {
@@ -78,6 +78,10 @@ body {
 .dropdown.engaged .dropdown-toggle {
   display: block;
   cursor: pointer;
+}
+
+.dropdown.engaged .dropdown-toggle:after {
+  margin-left: 5px;
 }
 
 .dropdown.engaged .dropdown-toggle:after {

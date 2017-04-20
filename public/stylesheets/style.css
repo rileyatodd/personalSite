@@ -30,8 +30,8 @@ body {
   background-color: #047CB0;
 }
 
-.navbar li {
-  padding: 15px;
+.navbar li a {
+  padding: 10px;
 }
 
 .dropdown ul {
@@ -44,31 +44,24 @@ body {
   display: none;
   position: absolute;
   right: 0;
-  top: 50px;
+  top: 51px;
   width: 200px;
 }
 
 .dropdown.engaged.open ul {
   display: block;
-  border: 1px solid #61c7f5;
 }
 
 .navbar li {
   display: inline;
 }
-
+.dropdown.engaged li > a,
 .dropdown.engaged li {
   display: block;
-  padding: 10px 10px;
-  cursor: pointer;
 }
 
 .dropdown.engaged li:hover {
-  background-color: #FFF;
-}
-
-.dropdown.engaged li:hover a {
-  color: #047CB0;
+  background-color: #42525a;
 }
 
 .dropdown-toggle {

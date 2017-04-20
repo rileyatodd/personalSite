@@ -1,5 +1,5 @@
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 17px "Lucida Grande", Helvetica, Arial, sans-serif;
   margin: 0;
 }
 
@@ -7,6 +7,7 @@ body {
   background-color: #047CB0;
   color: #FFF;
   overflow: auto;
+  font-size: 14px;
 }
 
 .navbar a {
@@ -74,11 +75,9 @@ body {
 }
 
 .dropdown.engaged .dropdown-toggle:after {
-  margin-left: 5px;
-}
-
-.dropdown.engaged .dropdown-toggle:after {
   content: '\25BC';
+  margin-left: 15px;
+  font-size: .75em;
 }
 
 .dropdown.engaged.open .dropdown-toggle:after {
@@ -89,4 +88,26 @@ body {
   padding: 10px;
   margin: 10px auto;
   max-width: 720px;
+}
+
+.article {
+  line-height: 1.55;
+}
+
+.article p {
+  margin: 25px 0 0 0;
+}
+
+.article ul {
+  list-style: none;
+}
+
+.article li {
+  margin: 18px 0 0 0;
+}
+
+.article ul li:before {
+  content: '\25b1';
+  margin-left: -2em;
+  margin-right: 1em;
 }

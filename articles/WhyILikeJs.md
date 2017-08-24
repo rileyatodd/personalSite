@@ -3,4 +3,6 @@
 - you only really need two things
   - data literals
   - first class functions
-  the rest is just sugar
+- The ecosystem feels democratic
+  - You sometimes cater to a low common denominator and don't always have the nicest things
+  - but on the other hand there's a great diversity of opinion, from large companies putting a ton of money into making it faster to small open source authors publishing on npm

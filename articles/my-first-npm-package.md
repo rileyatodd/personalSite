@@ -1,4 +1,4 @@
-# My First npm Package
+## My First npm Package
 
 I just published my first open source package on npm, and I have to say I'm pretty excited about it. I've been looking for a problem to solve that would make for a good first package for some time now. It needed to be small, broadly applicable, and useful for solving a problem many people have encountered. Lets start with the problem.
 

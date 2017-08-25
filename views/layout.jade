@@ -15,17 +15,18 @@ html
     div.navbar
       a.navbar-brand(href="/#")
         |Riley A Todd
-      div.navbar-right
-        a(data-fullscreen-toggle data-fullscreen-target="site-nav")
-          |Projects
-          span.caret
-        ul#site-nav
+      div#site-nav(data-move-to="body")
+        div.close(data-toggle-class="open" data-target="#site-nav") 
+          &times;
+        ul
           li
-            a(href="/html/chicago-food-safety.html" data-toggle="collapse" data-target=".navbar-collapse")
+            a(href="/html/chicago-food-safety.html")
               |Chicago Food Safety Map
           li
-            a(href="/html/habit-tracker.html" data-toggle="collapse" data-target=".navbar-collapse")
+            a(href="/html/habit-tracker.html")
               |Habit Tracker
+      a.menu-toggle(data-target="#site-nav" data-toggle-class="open")
+        |Projects
               
     div.container
       block content

@@ -7,17 +7,20 @@ function onClickOutside(element, f) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+	document.addEventListener('click', function(e) {
+		var toggleClass = e.target.dataset.toggleClass
+		var selector = e.target.dataset.target
+
+		toggleClass && selector 
+		&& document.querySelectorAll(selector).forEach(function(target) {
+			target.classList.toggle(toggleClass)
+		})
+	})
+
 	document
-		.querySelectorAll('[data-fullscreen-toggle]')
-		.forEach(function(toggle) {
-			var target = document.getElementById(toggle.dataset.fullscreenTarget)
-			target.dataset.fullscreenTargeted = true;
-			target.remove()
-			document.body.append(target)
-			
-			toggle.dataset.fullscreenEngaged = true;
-			toggle.addEventListener('click', function(el) {
-				target.classList.toggle('open')
-			})
+		.querySelectorAll('[data-move-to]')
+		.forEach(function(el) {
+			el.remove()
+			document.querySelector(el.dataset.moveTo).append(el)
 		})
 })

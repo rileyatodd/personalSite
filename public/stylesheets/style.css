@@ -8,11 +8,14 @@ body {
   color: #FFF;
   overflow: auto;
   font-size: 14px;
+  position: relative;
+  transition: all .5s linear;
 }
 
 .navbar a {
   color: #fff;
   text-decoration: none;
+  padding: 17px;
 }
 
 .navbar .navbar-brand {
@@ -24,7 +27,6 @@ body {
 .navbar-right {
   float: right;
   text-align: center;
-  padding: 15px;
 }
 
 .navbar ul {
@@ -35,10 +37,44 @@ body {
   padding: 10px;
 }
 
+[data-fullscreen-toggle][data-fullscreen-engaged] {
+  display: initial;
+}
+
+[data-fullscreen-toggle] {
+  display: none;
+}
+
+[data-fullscreen-targeted] {
+  position: fixed;
+  top: 0;
+  margin: 0;
+  background: #047CB0;
+  width: 100%;
+  overflow: hidden;
+  
+  transition: all 1s ease-in-out;
+  height: 0%;
+  color: transparent !important;
+}
+
+[data-fullscreen-targeted].open {
+  height: 100%;
+  color: inherit !important;
+}
+
 .dropdown ul {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.navbar .dropdown.engaged.open {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  
 }
 
 .dropdown.engaged ul {
@@ -121,3 +157,4 @@ body {
 h2 {
   margin-bottom: .2em;
 }
+

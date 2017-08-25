@@ -16,17 +16,17 @@ html
       a.navbar-brand(href="/#")
         |Riley A Todd
       div.navbar-right
-        div.dropdown
-          a.dropdown-toggle(data-toggle="dropdown")
-            |Projects
-            span.caret
-          ul.dropdown-menu
-            li
-              a(href="/html/chicago-food-safety.html" data-toggle="collapse" data-target=".navbar-collapse")
-                |Chicago Food Safety Map
-            li
-              a(href="/html/habit-tracker.html" data-toggle="collapse" data-target=".navbar-collapse")
-                |Habit Tracker
+        a(data-fullscreen-toggle data-fullscreen-target="site-nav")
+          |Projects
+          span.caret
+        ul#site-nav
+          li
+            a(href="/html/chicago-food-safety.html" data-toggle="collapse" data-target=".navbar-collapse")
+              |Chicago Food Safety Map
+          li
+            a(href="/html/habit-tracker.html" data-toggle="collapse" data-target=".navbar-collapse")
+              |Habit Tracker
+              
     div.container
       block content
     div.footer

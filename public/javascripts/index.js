@@ -1,21 +1,23 @@
 function onClickOutside(element, f) {
 	window.addEventListener('click', function(e) {
 		if (!element.contains(e.target)) {
-			f()
+			f(element, e)
 		}
 	})
 }
 
 document.addEventListener('DOMContentLoaded', function() {
 	document
-		.querySelectorAll('.dropdown')
-		.forEach(function(container) {
-			container.classList.add('engaged')
-			container.addEventListener('click', function(el) {
-				this.classList.toggle('open')
-			})
-			onClickOutside(container, function() {
-				container.classList.remove('open')
+		.querySelectorAll('[data-fullscreen-toggle]')
+		.forEach(function(toggle) {
+			var target = document.getElementById(toggle.dataset.fullscreenTarget)
+			target.dataset.fullscreenTargeted = true;
+			target.remove()
+			document.body.append(target)
+			
+			toggle.dataset.fullscreenEngaged = true;
+			toggle.addEventListener('click', function(el) {
+				target.classList.toggle('open')
 			})
 		})
 })

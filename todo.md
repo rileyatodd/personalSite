@@ -1,3 +1,3 @@
-- find good styles for code blocks
+- style up my menu / nav 
 - replace react with preact in food safety map
 - port over basic data handling logic to p-habit-tracker so I can start prototyping input screen layouts with real data and have real data for coming up with some cool dataViz stuff

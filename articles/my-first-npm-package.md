@@ -125,7 +125,7 @@ Here we instantiate a cache on the component that will remember all the function
 
 The `partial` function takes the cache as its first argument, the function to bind arguments to as the second, and as many other values as you want to bind to the function. It allocates a function that has those arguments and returns it. Importantly though, the next time partial is called with those same arguments, *it returns the same function, not a new one*. You can bind arbitrary arguments, it doesn't involve the dom, you don't have to refactor your handlers and you don't have to factor out a child component. You just allocate a cache and wrap what would you would have put in an arrow function or a call to .bind() in a call to memoBind() instead. 
 
-*Note: memo-bind also exports a function called `bind` which is the same as partial except that it accepts a thisArg.
+*Note: memo-bind also exports a function called `bind` which is the same as partial except that it accepts a thisArg.*
 
 It is important to note that there are limitations to memoization. The biggest of which is that to memoize a function it must be *referentially transparent* which is to say that it must be a pure function of inputs to outputs with no outside influences or side effects. Luckily, memo-bind doesn't memoize the functions you hand it. It memoizes the binding of arguments to those functions, which is referentially transparent regardless of the function! 
 

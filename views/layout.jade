@@ -20,13 +20,16 @@ html
           &times;
         ul
           li
+            a(href="/#thoughts" data-toggle-class="open" data-target="#site-nav")
+              |thoughts
+          li
             a(href="/html/chicago-food-safety.html")
-              |Chicago Food Safety Map
+              |food safety map
           li
             a(href="/html/habit-tracker.html")
-              |Habit Tracker
+              |habit tracker
       a.menu-toggle(data-target="#site-nav" data-toggle-class="open")
-        |Projects
+        |menu
               
     div.container
       block content

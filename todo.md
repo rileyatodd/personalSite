@@ -1,3 +1,4 @@
+- Put habit tracker inside layout
 - Style up full size screen nav
 - Put some design work into the index page
 - replace react with preact in food safety map

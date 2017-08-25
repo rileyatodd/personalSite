@@ -5,8 +5,7 @@ block content
     |Welcome to my site!
   p
     |I made this site as a place to dump my ideas out, fiddle around with new web technologies, and display my work. 
-  p
-    i Please pardon the sparse content and lackluster design. I am still working on adding content and polish.
+  nm
   h1.sectionDivider Thoughts
 
   .article
@@ -14,3 +13,7 @@ block content
 
   .article
     include:md ../articles/HotkeyHijinks.md
+
+  link(rel="stylesheet" href="/stylesheets/darcula.css")
+  script(src="/javascripts/highlight.pack.js")
+  script hljs.initHighlightingOnLoad()

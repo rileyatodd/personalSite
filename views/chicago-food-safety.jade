@@ -4,19 +4,17 @@ block content
   h1 Chicago Food Safety Inspections
   h2 About
   p.
-    This a project I quickly threw together that sources food safety inspection data from the #[a(href='http://data.cityofchicago.org') data.cityofchicago.org] and plots it on a map. Upon clicking the 'Search In Map' button, the map will be populated with data of the 1000 most recent inspections of establishments located within the bounds of the map. Note that means there probably won't be 1000 establishments displayed at once on the map, and the total number of unique establishments is displayed above the map.
+    This a project that sources food safety inspection data from #[a(href='http://data.cityofchicago.org') data.cityofchicago.org] and plots it on a map. Upon clicking the 'Search In Map' button, the map will be populated with data of the 1000 most recently inspected establishments located within the bounds of the map.
   h3 Filtering
   p.
     Once the inspection data has been loaded you can filter it by selecting a result filter.
   h3 Data Display Types
   p.
     You can view the plotted data in two different ways. One way is to place a marker on the map for each establishment. This view has the benefit of being able to click on the markers to see the results and violations of the inspections. The other way to view the data is via a heatmap, which is more helpful in determing the relative density of locations. Combining the heatmap view with the 'Have failed at least once' filter allows one to see areas where food inspection failures are more common. 
+  h3 Searching
+  p.
+    The search feature only works for data already loaded into the map. This means you have to position the map to contain the establishments you want to search for and click "Search in Map" first to populate the data. Once you have done that the queries you type in the search bar will filter the data you have loaded.
 
   #root
-  script
-    | var gmapScript = document.createElement('script');
-    | gmapScript.setAttribute('src', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBu9YoSsRP2XYViyxIcPaMgwg2Engc2Nh4&libraries=geometry,visualization')
-    | document.body.appendChild(gmapScript)
-    | var bundleScript = document.createElement('script');
-    | bundleScript.setAttribute('src', '/javascripts/food-safety-bundle.js')
-    | document.body.appendChild(bundleScript)
+  script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBu9YoSsRP2XYViyxIcPaMgwg2Engc2Nh4&libraries=geometry,visualization')
+  script(src='/javascripts/food-safety-bundle.js')

@@ -152,3 +152,40 @@ h2 {
   margin-bottom: .2em;
 }
 
+.text-right {
+  text-align: right;
+}
+
+.flex,
+.space-between,
+.baseline,
+.v-center {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.baseline {
+  align-items: baseline;
+}
+
+.v-center {
+  align-items: center;
+}
+
+h4 {
+  margin: 5px 0;
+}
+
+@media print {
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  div.navbar {
+    display: none;
+  }
+}

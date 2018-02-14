@@ -1,55 +1,61 @@
 extends layout
 
 block content
-  div.row
-    div.col-xs-6 
-      h1 Riley A. Todd
-    div.col-xs-6.text-right
-      h5
-        |(317) 413-8240
-      h5
+  div.space-between.v-center
+    div 
+      h1(style="font-size: 40px") Riley A Todd
+    div.text-right
+      div(style="font-size: .8em").
+        (317) 413-8240
+      div(style="font-size: .8em")
         a(href='mailto:rileyatodd@gmail.com') rileyatodd@gmail.com
-      h5
+      div(style="font-size: .8em")
         a(href='rileyatodd.com') rileyatodd.com
   p My story so far in reverse chronological order
-  div.row
-    div.col-xs-12
-      h3 Work Experience
-  div.row
-    div.col-xs-4
-      h4 Publicis Media
-      h5 Aug 2016 - Present
-    div.col-xs-8
-      h4 Software Engineer
-      p 
-        |I'm working on an analytics platform for large scale advertising data 
-        |using react, mongo, and elasticsearch.
-  div.row
-    div.col-xs-4
-      h4 Healthcare Reasearch LLC
-      h5 Jul 2015 - Jul 2016
-    div.col-xs-8
-      h4 Software Engineer
-      p
-        |Did everything necessary to bring features to life on both a public 
-        |php site with over a million users and an internal analytics platform 
-        |built on spring.
-  div.row
-    div.col-xs-12
-      h3 Education
-  div.row
-    div.col-xs-4
-      h4 Indiana University 
-      |Aug 2011 - May 2015
-    div.col-xs-8
-      h4 B.S. in Economic Consulting
-      p
-        |This taught me a lot about econometrics and statistical analysis, 
-        |as well as a little bit of game theory, and 
-        |how to apply this knowledge in a business setting.
-  div.row
-    div.col-xs-12
+  div
+    div.space-between.baseline
+      div 
+        h2 Publicis Media
+        div.subheader Sr. Software Engineer
+      div Aug 2016 - Present
+    div
+      p.
+        I'm working on a unified advertising platform that ingests large amounts of data from various services 
+        and partners. It is capable of planning, 
+        executing, and tracking ad campaigns across multiple media types.
+        I work on the database, server, and client layers of the stack using tools 
+        including Angular, Rails, MongoDB, PostgreSQL, and ElasticSearch.
+  div
+    div.space-between.baseline
+      div
+        h2 Healthcare Reasearch LLC
+        div.subheader Software Engineer
+      div Jul 2015 - Jul 2016
+    div
+      p.
+        I worked on a small team doing everything necessary to bring new features to life on both a public 
+        php site with over a million users and an internal analytics platform 
+        built in Java using the Spring framework.
+  div
+    div.space-between.baseline
+      div 
+        h2 Indiana University
+        div.subheader B.S. in Economic Consulting
+      div Aug 2011 - May 2015
+    div
+      p.
+        I learned about econometrics and statistical analysis, 
+        as well as a little bit of game theory, and 
+        how to apply this knowledge in a business setting.
+      div.subheader Computer Science Minor
+      p.
+        I learned the fundamentals of computer science including data structures, algorithm analysis, distributed computing, and networks. I also worked as teaching assistant for systems programming and data structures classes.
+  div
+    div
       h3 Other Interests
-      p
-        |I like to spin poi to help me relax. 
-        |Check out my website to see more of my projects and learn about what makes me tick!
+      p.
+        If I'm feeling productive in my free time I like to learn about functional 
+        programming. To relax I enjoy playing guitar and spinning poi.
+      p.
+        Check out my website to see more of my projects and learn about what makes 
+        me tick

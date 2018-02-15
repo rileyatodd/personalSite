@@ -179,12 +179,16 @@ h4 {
   margin: 5px 0;
 }
 
+.subheader {
+  font-weight: bold;
+}
+
 @media print {
   a {
     text-decoration: none;
     color: inherit;
   }
-  
+
   div.navbar {
     display: none;
   }

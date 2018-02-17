@@ -175,12 +175,28 @@ h2 {
   align-items: center;
 }
 
+.flex-start {
+  align-items: flex-start;
+}
+
 h4 {
   margin: 5px 0;
 }
 
-.subheader {
+.resume .subheader {
   font-weight: bold;
+}
+
+.resume p {
+  margin: .3em 0 1.1em 0;
+}
+
+.resume h2 {
+  margin-top: 0;
+}
+
+.resume .section {
+  margin-top: 1.5em;
 }
 
 @media print {

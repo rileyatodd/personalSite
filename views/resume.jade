@@ -1,57 +1,76 @@
 extends layout
 
 block content
-  div.space-between.v-center
-    div 
-      h1(style="font-size: 40px") Riley A Todd
-    div.text-right
-      div(style="font-size: .8em").
-        (317) 413-8240
-      div(style="font-size: .8em")
-        a(href='mailto:rileyatodd@gmail.com') rileyatodd@gmail.com
-      div(style="font-size: .8em")
-        a(href='rileyatodd.com') rileyatodd.com
-  p My story so far in reverse chronological order
-  div
-    div.space-between.baseline
+  div.resume
+    div.space-between.v-center
       div 
-        h2 Publicis Media
-        div.subheader Sr. Software Engineer
-      div Aug 2016 - Present
-    div
-      p.
-        I'm working on a unified advertising platform that ingests large amounts of data from various services and partners. It is capable of planning, executing, and tracking ad campaigns across multiple media types. 
-      p.
-        I serve as the front end engineering lead, designing the architecture of our Angular application. I also work on the server and database layers of the stack using tools including Rails, MongoDB, PostgreSQL, and ElasticSearch.
-  div
-    div.space-between.baseline
+        h1(style="font-size: 40px; margin-bottom: 18px;") Riley A. Todd
+      div.text-right
+        //- div(style="font-size: .8em").
+          (317) 413-8240
+        div(style="font-size: .8em")
+          a(href='mailto:rileyatodd@gmail.com') rileyatodd@gmail.com
+        div(style="font-size: .8em")
+          a(href='rileyatodd.com') rileyatodd.com
+    div.section
+      div.space-between
+        div 
+          h2 Publicis Media
+          div.subheader Sr. Software Engineer
+        div.text-right
+          div Aug 2016 - Present
+          div Chicago, IL
       div
-        h2 Healthcare Reasearch LLC
-        div.subheader Software Engineer
-      div Jul 2015 - Jul 2016
+        p.
+          I'm building a unified advertising platform that ingests large amounts of data from various services and partners. It plans, executes, and tracks ad campaigns across multiple media types. 
+        p.
+          As the front end engineering lead, I designed the architecture of our Angular application. I also work on the server and database layers using Rails, MongoDB, PostgreSQL, and ElasticSearch.
+    div.section
+      div.space-between
+        div
+          h2 Healthcare Reasearch LLC
+          div.subheader Software Engineer
+        div.text-right
+          div Jul 2015 - Jul 2016
+          div Chicago, IL
+      div
+        p.
+          I created new features on both a public php site with over a million users and an internal analytics platform built in Java using the Spring framework.
+    div.section
+      div.space-between
+        div 
+          h2 GE Capital
+          div.subheader 
+            div Information Technology Leadership Program
+        div.text-right
+          div May 2014 - Jul 2014
+          div New Orleans, LA
+      div
+        p.
+          I created a risk assessment application using Angular, Spring, and PostgreSQL that automated a process that previously took a month to complete manually, but now takes only a few days.
+    div.section
+      div.space-between
+        div 
+          h2 Indiana University
+          div.subheader 
+            div B.S. in Economic Consulting
+            div Computer Science Minor
+        div.text-right
+          div Aug 2011 - May 2015
+          div Bloomington, IN
+      div
+        p.
+          I became proficient in econometrics, statistical analysis, and game theory with a focus on applications in modern business.
+        p.
+          I mastered the fundamentals of data structures, algorithm analysis, distributed computing, and networks.
+        div.subheader Assistant Teacher
+        p.
+          I instructed labs for systems programming and data structures classes, learning to manage thirty students at a time, explain complex subjects simply, and impart insights and principles.
     div
-      p.
-        I worked on a small team doing everything necessary to bring new features to life on both a public 
-        php site with over a million users and an internal analytics platform 
-        built in Java using the Spring framework.
-  div
-    div.space-between.baseline
-      div 
-        h2 Indiana University
-        div.subheader B.S. in Economic Consulting
-      div Aug 2011 - May 2015
-    div
-      p.
-        I learned about econometrics, statistical analysis, and game theory. The curriculum was focused on applying this knowledge in a business setting.
-      div.subheader Computer Science Minor
-      p.
-        I learned the fundamentals of computer science including data structures, algorithm analysis, distributed computing, and networks. I also worked as teaching assistant for systems programming and data structures classes.
-  div
-    div
-      h3 Other Interests
-      p.
-        If I'm feeling productive in my free time I like to learn about functional 
-        programming and machine learning. To relax I enjoy playing guitar and spinning poi.
-      p.
-        Check out my website to see more of my projects and learn about what makes 
-        me tick
+      div
+        h3(style="margin-bottom: 8px;") Interests
+        p(style="margin-bottom: 8px;").
+          I practice functional programming, guitar, and poi spinning.
+        p.
+          Check out my website to see more of my projects and learn about what makes 
+          me tick.

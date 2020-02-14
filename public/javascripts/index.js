@@ -16,14 +16,4 @@ document.addEventListener('DOMContentLoaded', function() {
 			target.classList.toggle(toggleClass)
 		})
 	})
-
-	document
-		.querySelectorAll('[data-move-to]')
-		.forEach(function(el) {
-			let maxWidth = parseInt(el.dataset.moveToMaxWidth)
-			if (maxWidth && window.innerWidth > maxWidth) return
-
-			el.remove()
-			document.querySelector(el.dataset.moveTo).append(el)
-		})
 })

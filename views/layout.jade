@@ -16,22 +16,25 @@ html
     div.navbar
       a.navbar-brand(href="/#")
         |Riley A Todd
-      div#site-nav
-        div.menu
-          div.close(data-toggle-class="open" data-target="#site-nav") 
-            |&times;
-          ul
-            li
-              a(href="/#thoughts" data-toggle-class="open" data-target="#site-nav")
-                |thoughts
-            li
-              a(href="/html/chicago-food-safety.html")
-                |food safety map
-            //li
-              a(href="/html/habit-tracker.html")
-                |habit tracker
       a.menu-toggle(data-target="#site-nav" data-toggle-class="open")
         |menu
+      div#site-nav
+        div.close(data-toggle-class="open" data-target="#site-nav") 
+          |&times;
+        ul
+          li
+            a(href="/#thoughts" data-toggle-class="open" data-target="#site-nav")
+              |thoughts
+          li
+            a(href="/html/chicago-food-safety.html")
+              |food safety map
+          li
+            a(href="/html/chicago-food-safety.html")
+              |lorem
+          li
+            a(href="/html/chicago-food-safety.html")
+              |ipsum sumpin sumpin
+      
               
     div.container
       block content

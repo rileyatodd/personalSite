@@ -35,8 +35,14 @@ ul, ol {
   padding: 15px;
 }
 
+#site-nav {
+  display: flex;
+  align-items: center;
+}
+
 @media (max-width: 760px) {
   #site-nav {
+    display: block;
     position: absolute;
     margin: 0;
     background: #047CB0;

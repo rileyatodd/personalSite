@@ -2,7 +2,7 @@ doctype html
 html
   head
     title Riley A Todd
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/index.css')
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1")
@@ -13,12 +13,12 @@ html
     script(src='/javascripts/index.js')
 
   body
-    div.navbar
-      a.navbar-brand(href="/#")
+    div.navbar.bg-blue-0.text-white
+      a.navbar-brand(href="/#").text-lg
         |Riley A Todd
       a.menu-toggle(data-target="#site-nav" data-toggle-class="open")
         |menu
-      div#site-nav
+      div#site-nav.bg-blue-0
         div.close(data-toggle-class="open" data-target="#site-nav") 
           |&times;
         ul
@@ -36,7 +36,5 @@ html
               |ipsum sumpin sumpin
       
               
-    div.container
+    div.container.mx-auto.p-6
       block content
-    div.footer
-      div.container

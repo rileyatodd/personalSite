@@ -1,0 +1,173 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+body {
+  overflow-x: hidden;
+}
+
+a {
+  cursor: pointer;
+}
+
+.navbar {
+  font-size: 14px;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 1;
+}
+
+.navbar a {
+  text-decoration: none;
+  padding: 17px;
+}
+
+.navbar .navbar-brand {
+  margin-right: auto;
+  padding: 15px;
+}
+
+#site-nav {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 760px) {
+  #site-nav {
+    display: block;
+    position: absolute;
+    margin: 0;
+    width: 250px;
+
+    transition: all 300ms ease-in-out;
+    transform: translateX(100%);
+    box-shadow: 0 0 0 0 #3e3e3e;
+  }
+
+  #site-nav.open {
+    transform: translateX(0);
+    box-shadow: 0 0 10px 5px #3e3e3e;
+  }
+
+  #site-nav ul {
+    list-style: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+  }
+
+  #site-nav li {
+    margin: 0 auto;
+    padding: 10px 0;
+  }
+
+  #site-nav li:not(:last-child) {
+    border-bottom: 1px solid rgba(255,255,255, .5);
+  }
+
+  #site-nav a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+  }
+
+  #site-nav .close {
+    display: block;
+    font-size: 36px;
+    line-height: 1;
+    height: 40px;
+    cursor: pointer;
+    color: #fff;
+    width: 40px;
+    text-align: center;
+    transition: all 300ms linear;
+    transform: rotate(160deg);
+  }
+
+  #site-nav.open .close {
+    transform: rotate(0);
+  }
+
+  #site-nav.open + .menu-toggle {
+    display: none;
+  }
+
+  .navbar a.menu-toggle {
+    display: block;
+  }
+}
+
+.navbar .menu-toggle {
+  display: none;
+}
+
+.navbar .close {
+  display: none;
+}
+
+.navbar-right {
+  float: right;
+  text-align: center;
+}
+
+.navbar ul {
+  background-color: #047CB0;
+}
+
+.navbar li a {
+  padding: 10px;
+}
+
+.navbar li {
+  display: inline;
+}
+
+.article {
+  line-height: 1.55;
+}
+
+.article p {
+  margin: 0 0 25px 0;
+}
+
+.article ul {
+  padding: 0 0 0 40px;
+}
+
+.article li {
+  margin: 18px 0 0 0;
+}
+
+.article ul li:before {
+  content: '\25b1';
+  margin-left: -2em;
+  margin-right: 1em;
+}
+
+.resume .subheader {
+  font-weight: bold;
+}
+
+.resume p {
+  margin: .3em 0 1.1em 0;
+}
+
+.resume .section {
+  margin-top: 1.5em;
+}
+
+@media print {
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  div.navbar {
+    display: none;
+  }
+}

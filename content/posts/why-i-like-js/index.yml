@@ -1,0 +1,8 @@
+# Cuttlebelle recognizes partials if they end with ".md" and that their path exists inside your content folder
+
+title: Why I Like JS
+
+layout: Article
+
+main:
+  - why-i-like-js.md

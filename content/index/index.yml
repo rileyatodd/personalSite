@@ -1,0 +1,9 @@
+# Cuttlebelle recognizes partials if they end with ".md" and that their path exists inside your content folder
+
+title: Riley A Todd
+
+layout: HomePage
+
+posts:
+  - /posts/hotkey-hijinks/hotkey-hijinks.md
+  - /posts/my-first-npm-package/my-first-npm-package.md

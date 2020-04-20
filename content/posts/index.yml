@@ -1,0 +1,5 @@
+# Cuttlebelle recognizes partials if they end with ".md" and that their path exists inside your content folder
+
+title: Riley A Todd
+
+layout: PostsIndexPage

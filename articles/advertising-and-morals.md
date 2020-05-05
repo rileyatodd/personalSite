@@ -55,12 +55,26 @@ not lying to clients but lying to the public.
       - *Should make more effort to define the ruling class here*
 
 # A new plan
-  - Work should not be avoided. I will largely be judged at my funeral by the work I have done to help others. 
-  - If my plan was to make enough money so that I could help people without worrying about financial security then my priorities were backwards
-    - I should help people first and worry about money second.
-  - If I fundamentally recuse myself from the working world with early retirement than I have forsaken any hope of solidarity with the people I claim to want to help
-  - Early retirement can still be a great thing. Less financial obligations does mean that I can focus more on helping people. However, I should not compromise my morals to do so, and I should not use some vague notion of future ability to do good to justify doing wrong right here and now. 
-  - 
+- Work should not be avoided. I will largely be judged at my funeral by the work I have done to help others. 
+- If my plan was to make enough money so that I could help people without worrying about financial security then my priorities were backwards
+  - I should help people first and worry about money second.
+- If I fundamentally recuse myself from the working world with early retirement than I have forsaken any hope of solidarity with the people I claim to want to help
+- Early retirement can still be a great thing. Less financial obligations does mean that I can focus more on helping people. However, I should not compromise my morals to do so, and I should not use some vague notion of future ability to do good to justify doing wrong right here and now. 
+- I'm quitting the industry immediately
+- 
+
+## Postmortem (or how to avoid making the same mistake again)
+- 
+
+## Other reasons I'm leaving
+- The company does not value security to the extent that it should
+  - Our data is so-called "anonymized", but there's nothing stopping someone from de-anonymizing it 
+  by matching it against a data set that is not anonymous
+    - datasets that very much exist, and are attainable by hackers, especially state-sponsored hackers
+- The company lies to both the public and its clients
+- The company's CEO pushes PR campaigns for wastes of money like marcel that have no use other than generating buzz around an incoming CEO
+- The company's response to the market power of Google and Facebook has been to attempt to gather market power of its own by buying rolling up the rest of the advertising industry
+- Product decisions are based on what will win a pitch rather than what will make a good product
 
 ## *Potential prompt for another article* 
 - Are network effects inherently evil? What's the difference between a network effect and an anticompetitive monopoly. How do venture funded firms seek to leverage the prior into the latter. 

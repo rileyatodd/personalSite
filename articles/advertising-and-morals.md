@@ -9,14 +9,17 @@
 - It adds an unacceptable amount of bloat to web pages, which is an environmental concern
   - *Here we can hook a lot of people with the broadly known moral dilemma of environmental concerns*
   - *This is also a chance to add some hard numbers*
+  - *Link to perf-as-environmentalism.md*
 - It is opaque to users. People are creeped out by it because they fundamentally don't understand how it works or the extent to which they are being surveilled.
   - *Here we can be anecdotal and relate to a lot of experiences that have become commonplace
     - e.g. talking aloud about something and then being shown ads for it*
-- It is an industry built on bending the truth
+  - *I can also add anecdotes of trying to explain how digital advertising works to people*
+- It is an industry built on bending the truth and manipulating people
   - *Maybe talk here about historical restrictions on advertising and how they are being subverted*
 - It has large potential for abuse as a propaganda machine
   - *Here we can make note of history and how propaganda is inherently perceived as negative in the US*
-- *At some point in this opening we need to address common retorts*
+
+*At some point in this opening we need to address common retorts*
   - What do you have to hide? 
     - Point to the propaganda machine, relate to fears of scarlet lettering of coronavirus victims
   - No one can do things as well as ${fav-tech-giant}
@@ -44,15 +47,25 @@ not lying to clients but lying to the public.
   - I knew within a year that my company was slimy
 - They paid well, with good benefits and health insurance
   - Time to note here that employment based health insurance is evil
+- My boss was incredible, routinely going to bat for me to get me swift promotions and large raises,
+encouraging me to ask for more responsibility and giving me freedom to meet those responsibilities 
+the way I saw fit. He is in large part responsible for me transitioning from scrappy programmer
+without a CS degree to a respectable software engineer.
 - I had an exit point in my mind
   - Early retirement
-    - It felt noble to save my money, to be responsible where so many including the federal government were not
+    - It felt noble to save my money, to be responsible in this area when so many including the federal government were not
     - Once I had saved enough money to not have to work then I wouldn't have to work for evil companies and I could be more picky
-    - This is horse shit
+      - This is horse shit
     - I compromised my morals for the idea of an easier life based on acquiring an amount of financial resources that most people never will.
     - I made myself think everything is fine because this goal seems so attainable to me
     - I wanted to essentially be a bottom dweller of the ruling class
       - *Should make more effort to define the ruling class here*
+    - This also hinged almost entirely on stock market performance. I'm seeing firsthand that that
+    is not always guaranteed, and while I do believe the market will recover, the more I read about 
+    the current financial mess we're in the more it occurs to me that at some point in the future 
+    we as a society will have to re-evaluate our relationsip with the stock market. I am not an
+    expert but it really seems like the financial system is a rickity one and banking on it to
+    pay for a peaceful worry and labor free lifetime for me is maybe not the healthiest idea.
 
 # A new plan
 - Work should not be avoided. I will largely be judged at my funeral by the work I have done to help others. 
@@ -61,24 +74,20 @@ not lying to clients but lying to the public.
 - If I fundamentally recuse myself from the working world with early retirement than I have forsaken any hope of solidarity with the people I claim to want to help
 - Early retirement can still be a great thing. Less financial obligations does mean that I can focus more on helping people. However, I should not compromise my morals to do so, and I should not use some vague notion of future ability to do good to justify doing wrong right here and now. 
 - I'm quitting the industry immediately
-- 
 
 ## Postmortem (or how to avoid making the same mistake again)
-- 
+- Don't take a job that doesn't align with your morals. Even if the benefits and pay are great it
+will eventually make you miserable. 
 
 ## Other reasons I'm leaving
 - The company does not value security to the extent that it should
-  - Our data is so-called "anonymized", but there's nothing stopping someone from de-anonymizing it 
-  by matching it against a data set that is not anonymous
-    - datasets that very much exist, and are attainable by hackers, especially state-sponsored hackers
+  - Our data is so-called "anonymized", but that doesn't ring true to me. What's stopping someone from de-anonymizing it 
+  by matching it against another data set? Non-anonymous data sets do exist and are attainable by hackers, states, state-sponsored hackers and employees of Facebook, Amazon, or Google
 - The company lies to both the public and its clients
-- The company's CEO pushes PR campaigns for wastes of money like marcel that have no use other than generating buzz around an incoming CEO
-- The company's response to the market power of Google and Facebook has been to attempt to gather market power of its own by buying rolling up the rest of the advertising industry
+- The company's CEO pushes wastes of money like marcel that have no use and are really just a sad attempt to generating buzz using buzz word of the year: AI. 
+- The company's response to the market power of Google and Facebook has been to attempt to gather market power of its own by buying companies and attempting a rollup of the rest of the advertising industry
 - Product decisions are based on what will win a pitch rather than what will make a good product
-
-## *Potential prompt for another article* 
-- Are network effects inherently evil? What's the difference between a network effect and an anticompetitive monopoly. How do venture funded firms seek to leverage the prior into the latter. 
-- What to do about it? Can simple regulations like forced interoperability save us from the common scenario where a single entity controls an entire network and all the market power that comes with it?
-  - simple regulations
-    - no loopholes or edge cases
-    - low potential for court battles over the meaning or enforcement policy
+- The hierarchy is way, way too deep. I never once have understood where my position in any org chart
+and usually didn't bother looking at org charts because they were always outdated due to constant 
+re-orgs that shuffled internal organizations and sometimes seemed like just an excuse to slap a new brand name on an existing division and have a press release.
+- I still have no idea who my users really are. 

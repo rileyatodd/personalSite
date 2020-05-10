@@ -1,0 +1,5 @@
+- Are network effects inherently evil? What's the difference between a network effect and an anticompetitive monopoly. How do venture funded firms seek to leverage the prior into the latter. 
+- What to do about it? Can simple regulations like forced interoperability save us from the common scenario where a single entity controls an entire network and all the market power that comes with it?
+  - simple regulations
+    - no loopholes or edge cases
+    - low potential for court battles over the meaning or enforcement policy

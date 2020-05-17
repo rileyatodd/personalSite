@@ -1,8 +1,0 @@
-- changing too much vs improving at a fast pace
-- new features make dynamic nature shine
-- you only really need two things
-  - data literals
-  - first class functions
-- The ecosystem feels democratic
-  - You sometimes cater to a low common denominator and don't always have the nicest things
-  - but on the other hand there's a great diversity of opinion, from large companies putting a ton of money into making it faster to small open source authors publishing on npm

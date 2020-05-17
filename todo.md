@@ -1,5 +1,1 @@
-- Put habit tracker inside layout
-- Style up full size screen nav
-- Put some design work into the index page
-- replace react with preact in food safety map
-- port over basic data handling logic to p-habit-tracker so I can start prototyping input screen layouts with real data and have real data for coming up with some cool dataViz stuff
+food-safety-bundle.js is expecting images/heatmap.png to exist. We try to somehow decouple these things and find a way for the foodmap to publish the image alongside itself to avoid depending on the location of assets in this repo

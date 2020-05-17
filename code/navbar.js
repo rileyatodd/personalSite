@@ -17,7 +17,7 @@ const NavBar = () => (
           </a>
         </li>
         <li>
-          <a href="/html/chicago-food-safety.html">
+          <a href="/projects/chicago-food-safety">
             food safety map
           </a>
         </li>

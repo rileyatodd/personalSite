@@ -1,0 +1,10 @@
+# Cuttlebelle recognizes partials if they end with ".md" and that their path exists inside your content folder
+
+title: Network Effects, Monopolies, and Forced Interop
+
+layout: Article
+
+published: false
+
+main:
+  - network-effects-monopolis-and-forced-interop.md

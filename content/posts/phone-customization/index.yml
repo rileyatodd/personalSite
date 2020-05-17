@@ -1,0 +1,10 @@
+# Cuttlebelle recognizes partials if they end with ".md" and that their path exists inside your content folder
+
+title: My Phone Customizations
+
+layout: Article
+
+published: false
+
+main:
+  - phone-customization.md

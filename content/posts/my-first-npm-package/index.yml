@@ -4,5 +4,7 @@ title: My First npm Package
 
 layout: Article
 
+published: true
+
 main:
   - my-first-npm-package.md

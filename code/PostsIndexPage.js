@@ -7,6 +7,7 @@ const PostsIndexPage = ({ title, stylesheet, main, script, _relativeURL, _ID, _p
   let posts = Object.keys(_pages)
     .filter(path => path.startsWith('posts/'))
     .map(path => _pages[path])
+    .filter(post => post.published)
 
   return (
     <Page {...{ title, stylesheet, main, script, _relativeURL, _ID }}>

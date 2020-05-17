@@ -4,5 +4,7 @@ title: Hotkey Hijinks
 
 layout: Article
 
+published: true
+
 main:
   - hotkey-hijinks.md

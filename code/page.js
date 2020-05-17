@@ -5,13 +5,14 @@ import NavBar from './navbar';
 const Page = ({ title, stylesheet, header, main, footer, script, _relativeURL, _ID, children }) => (
 	<html>
 	<head>
-		<title>Cuttlebelle - { title }</title>
+		<title>{ title }</title>
 		<meta charSet="utf-8" />
 		<meta httpEquiv="x-ua-compatible" content="ie=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="description" content="Personal Website of Riley A Todd" />
 		<meta name="author" content="Riley A. Todd" />
 		<meta name="robot" content="index, follow" />
+		<link rel="shortcut icon" href="/assets/img/favicon.ico?v=2" />
 
 		<link rel="stylesheet" href={ _relativeURL( `/assets/css/style.css`, _ID ) } />
 		{ stylesheet != undefined

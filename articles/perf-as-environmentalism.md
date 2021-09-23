@@ -38,7 +38,7 @@ requested content (e.g. the text of article found by search) to the total size o
 when an average browser loads the initial url. An even better metric would include any work done to
 serve the page but that is harder to measure.
 
-- Have ad-blockers, insofar as they reduce the above ratio, been a huge win for the environment?
+- Have ad-blockers, insofar as they improve the above ratio, been a huge win for the environment?
 
 - Is it possible to enact legislation to internalize some of these externalities? Could we enforce
 some penalties based on efficiency ratings of the type mentioned above?

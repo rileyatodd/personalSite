@@ -47,7 +47,7 @@ some penalties based on efficiency ratings of the type mentioned above?
 everything that is not esssential information, and loads things as lazily as possible?
   - If I browse the web from emacs does it work like this?
   - Firefox reader mode is a step in the right direction. 
-  - You should be able to reject loading styles altogether and only load content which is styled using user agent styles (which should be customizable, with sensible defaults, and accessiblity settings.)
+  - You should be able to reject loading styles altogether and only load content which is styled using user agent styles (which should be customizable per page, with sensible defaults, and accessiblity settings.)
   - One could imagine a browser extension/plugin that does this.
   - It would also be an opportunity to fix bad UI patterns. If you are only ingesting content you 
   can determine the UI that presents that content.

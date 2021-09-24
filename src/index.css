@@ -1,0 +1,211 @@
+body {
+  font: 17px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+a {
+  cursor: pointer;
+}
+
+.navbar {
+  background-color: #047CB0;
+  color: #FFF;
+  font-size: 14px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 17px;
+}
+
+.navbar .navbar-brand {
+  font-size: 18px;
+  margin-right: auto;
+  padding: 15px;
+}
+
+body > #site-nav {
+  position: fixed;
+  top: 0;
+  margin: 0;
+  background: #047CB0;
+  width: 100%;
+  overflow: hidden;
+  
+  transition: all 1s ease-in-out;
+  height: 0%;
+  color: transparent !important;
+}
+
+body > #site-nav.open {
+  height: 100%;
+  color: inherit !important;
+}
+
+body > #site-nav ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+body > #site-nav li {
+  margin: auto;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+body > #site-nav.open li {
+  opacity: 1;
+} 
+
+body > #site-nav a {
+  color: #fff;
+  font-size: 25px;
+  text-decoration: none;
+}
+
+.navbar #site-nav .close,
+.navbar #site-nav + .menu-toggle {
+  display: none;
+}
+
+body > #site-nav .close {
+  font-size: 36px;
+  line-height: 1;
+  height: 40px;
+  cursor: pointer;
+  color: #fff;
+  opacity:  0;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border-radius: 20px;
+  width: 40px;
+  text-align: center;
+  transition: all 1s ease-in-out;
+}
+
+body > #site-nav.open .close {
+  transform: rotate(1080deg);
+  opacity: 1;
+}
+
+.navbar-right {
+  float: right;
+  text-align: center;
+}
+
+.navbar ul {
+  background-color: #047CB0;
+}
+
+.navbar li a {
+  padding: 10px;
+}
+
+.navbar li {
+  display: inline;
+}
+
+.container {
+  padding: 10px;
+  margin: 10px auto;
+  max-width: 720px;
+}
+
+.article {
+  line-height: 1.55;
+}
+
+.article p {
+  margin: 0 0 25px 0;
+}
+
+.article ul {
+  list-style: none;
+}
+
+.article li {
+  margin: 18px 0 0 0;
+}
+
+.article ul li:before {
+  content: '\25b1';
+  margin-left: -2em;
+  margin-right: 1em;
+}
+
+.sectionDivider {
+  text-align: center;
+  border-bottom: solid 1px black;
+  padding-bottom: 10px;
+}
+
+h2 {
+  margin-bottom: .2em;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.flex,
+.space-between,
+.baseline,
+.v-center {
+  display: flex;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.baseline {
+  align-items: baseline;
+}
+
+.v-center {
+  align-items: center;
+}
+
+.flex-start {
+  align-items: flex-start;
+}
+
+h4 {
+  margin: 5px 0;
+}
+
+.resume .subheader {
+  font-weight: bold;
+}
+
+.resume p {
+  margin: .3em 0 1.1em 0;
+}
+
+.resume h2 {
+  margin-top: 0;
+}
+
+.resume .section {
+  margin-top: 1.5em;
+}
+
+@media print {
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  div.navbar {
+    display: none;
+  }
+}

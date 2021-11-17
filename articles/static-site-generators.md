@@ -14,3 +14,8 @@ Cuttlebelle
   - Simple convention mathcing src directory structure to page structure
     - relativePath helper provided as react prop
   - Markdown, Marked, and Frontmatter support
+BYO
+  - Simple one I wrote only takes 83 lines of basic node code
+  - Pick whichever libraries you want
+  - Easy to understand and tweak
+

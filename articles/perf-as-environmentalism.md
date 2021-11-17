@@ -2,7 +2,7 @@
 
 ## Impact of code performance
 Less cycles wasted on unnecessary or inefficient code directly reduces the amount of power 
-consumed by running said code which indirectly, in aggregate, results in less coal burned.
+consumed by running said code which, in aggregate, results in less coal burned.
 
 ## Webpage Bloat as low-hanging fruit
 - Less webpage bloat, less cycles spent on network & parsing -> less power consumed
@@ -18,7 +18,7 @@ As we have discussed above there are real costs to inefficient code. Actual thin
 in the real world to the detriment of our planet's carrying capacity for human life if, on average,
 we undervalue performance and underestimate resource costs. 
 
-However, we as writers of code rarely bare those costs, or even think of them. In the unending rush
+However, we as writers of code rarely bear those costs, or even think of them. In the unending rush
 to push out more features there are many noble concerns that often don't get the full attention they
 deserve. These include security, correctness, system stability, ux polish, accessibility, privacy etc. 
 Most organization prioritize these things in a different order but usually all less than new features (there are exceptions.) I would say that in my experience performance usually falls towards the bottom of

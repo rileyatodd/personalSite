@@ -2,3 +2,5 @@ node_modules/
 *.log
 data/
 public/html/
+public/articles/
+dist/

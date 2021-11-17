@@ -5,14 +5,15 @@
   "scripts": {
     "start": "node bin/www",
     "watch": "node bin/www & node watch.js",
-    "build": "jade views/ --out ./public/html && cp ./public/html/index.html ./public",
+    "build": "jade views/ --out ./public/html && cp ./public/html/index.html ./public & node bin/buildArticles.js --output-dir './public/articles'",
     "publish": "gsutil rsync -x '.*food-safety-bundle.js$' -x '.*habit-bundle.js$' -R ./public gs://www.rileyatodd.com"
   },
   "dependencies": {},
   "devDependencies": {
     "filewatcher": "^3.0.1",
     "jade": "~1.9.2",
-    "marked": "^0.3.6",
-    "node-static": "^0.7.9"
+    "marked": "^0.3.19",
+    "node-static": "^0.7.9",
+    "ramda": "^0.27.1"
   }
 }

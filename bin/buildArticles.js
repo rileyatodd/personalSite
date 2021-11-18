@@ -3,6 +3,9 @@ const fs = require('fs').promises
 const path = require('path')
 const R = require('ramda')
 const { parse } = require('marked')
+const React = require('react')
+const { renderToStaticMarkup } = require('react-dom/server')
+const Article = require('../src/ArticlePage.js')
 
 const pipeVal = (val, ...fns) => R.pipe(...fns)(val)
 const log = R.curry((tag, x) => { console.log(tag, x); return x })
@@ -19,35 +22,32 @@ const start = getArg('--start')
 // useful for caching the template files
 const loadedFiles = {}
 
-main()
+const { renderToDir } = require('../src/lib/buildHtml.js')
 
-function main() {
-  cleanOutputDir()
-    .then(_ => Promise.all([getArticles(), getArticlesMeta()]))
-    .then(([ articles, meta ]) => 
-      pipeVal(articles,
-        R.map(([ fileName, html ]) => ({ fileName, 
-                                         html, 
-                                         ...(meta[fileName] || {}) })),
-        R.map(a => getLayoutTemplate(a)
-                     .then(R.replace(articlePlaceholder, a.html))
-                     .then(output => R.mergeRight(a, {output}))),
-        as => Promise.all(as)))
-    .then(as => renderUnpublished ? as : as.filter(R.prop('published')))
-    .then(R.map(a => fs.writeFile(path.join(outputDir, a.fileName.replace('.md', '.html')), 
-                                  a.output)))
-    .then(writes => Promise.all(writes))
-    .then(_ => process.exit(0))
+renderToDir({ 
+  outputDir, 
+  render: renderArticleReact, 
+  getData: getArticles
+})
+
+function renderArticle(a) {
+  return getLayoutTemplate(a).then(R.replace(articlePlaceholder, a.html))
 }
 
-function cleanOutputDir() {
-  return fs.access(outputDir)
-           .then(_ => fs.rmdir(outputDir, { recursive: true }))
-           .catch(_ => fs.mkdir(outputDir, { recursive: true }))
-           .then(_ => fs.mkdir(outputDir, { recursive: true }))
+function renderArticleReact(article) {
+  return renderToStaticMarkup(React.createElement(Article, {article}))
 }
 
 function getArticles() {
+  return Promise.all([readArticles(), getArticlesMeta()])
+    .then(([ articles, meta ]) => 
+      articles.map(([ fileName, html ]) => ({ fileName, 
+                                              html, 
+                                              ...(meta[fileName] || {}) })))
+    .then(as => renderUnpublished ? as : as.filter(R.prop('published')))
+}
+// 800 403 0864 HIP 
+function readArticles() {
   return fs.readdir(inputDir)
            .then(R.pipe(R.filter(R.endsWith('.md')),
                         R.map(n => fs.readFile(path.join(inputDir, n), 'utf-8')

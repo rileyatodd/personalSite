@@ -9,7 +9,6 @@ const { log, getFlag, getArg } = require('../src/lib/util')
 
 const inputDir = getArg('--input-dir') || './articles'
 const outputDir = getArg('--output-dir') || './dist/articles'
-const templateLayout = getArg('--template-layout') || 'template.html'
 const renderUnpublished = getFlag('--render-unpublished')
 
 const { renderToDir } = require('../src/lib/buildHtml.js')
@@ -48,3 +47,5 @@ function getArticlesMeta() {
   return fs.readFile(path.join(inputDir, 'meta.json'), 'utf-8')
            .then(JSON.parse)
 }
+
+module.exports = {getArticles}

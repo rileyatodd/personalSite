@@ -25,7 +25,7 @@ function build({ outputDir }) {
   return pipeP(
     cleanDir(outputDir),
     _ => Promise.all([buildArticles(), buildIndex()]),
-    ([ articles, index ]) => articles.concat(index),
+    ([ articles, index ]) => articles.concat([index]),
     flatMapP(([ name, output ]) => fs.writeFile(path.join(outputDir, name), 
                                                 output)))
 }

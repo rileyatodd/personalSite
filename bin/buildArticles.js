@@ -2,35 +2,41 @@ const fs = require('fs').promises
 const path = require('path')
 const R = require('ramda')
 const { parse } = require('marked')
-const React = require('react')
-const { renderToStaticMarkup } = require('react-dom/server')
 
-const { log, getFlag, getArg } = require('../src/lib/util')
+const { log, getFlag, getArg, pipeP } = require('../src/lib/util')
 
 const inputDir = getArg('--input-dir') || './articles'
 const outputDir = getArg('--output-dir') || './dist/articles'
 const renderUnpublished = getFlag('--render-unpublished')
 
-const { renderToDir } = require('../src/lib/buildHtml.js')
-
-require('@babel/register')({presets: [require.resolve('@babel/preset-react'),
-                                      require.resolve('@babel/preset-env')]})
+const { renderToDir, renderReact } = require('../src/lib/buildHtml.js')
 
 const {ArticlePage} = require('../src/components/ArticlePage.js')
+const {ArticleIndex} = require('../src/components/ArticleIndex.js')
 
-renderToDir({ outputDir, 
-              render, 
-              getData: getArticles })
+let articles = getArticles()
 
-function render(article) {
-  return renderToStaticMarkup(React.createElement(ArticlePage, {article}))
+function build({ outputDir }) {
+  return pipeP(
+    renderToDir({ outputDir, 
+                  render: article => renderReact(ArticlePage, {article}),
+                  getData: getArticles }),
+    _ => articles,
+    as => fs.writeFile(path.join(outputDir, 'index.html'),
+                       renderReact(ArticleIndex, {articles: as})))
+}
+
+if (process.argv[1].endsWith('bin/buildArticles.js')) {
+  log('building articles', null)
+  build({ outputDir }).then(_ => process.exit(0))
 }
 
 function getArticles() {
   return Promise.all([readArticles(), getArticlesMeta()])
     .then(([ articles, meta ]) => 
       articles.map(([ fileName, html ]) => ({ fileName, 
-                                              html, 
+                                              html,
+                                              outputName: fileName.replace('.md', '.html'),
                                               ...(meta[fileName] || {}) })))
     .then(as => renderUnpublished ? as : as.filter(R.prop('published')))
 }
@@ -48,4 +54,4 @@ function getArticlesMeta() {
            .then(JSON.parse)
 }
 
-module.exports = {getArticles}
+module.exports = {getArticles, build}

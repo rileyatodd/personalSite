@@ -7,7 +7,7 @@ const { ensureDir, renderReact } = require('../src/lib/buildHtml.js')
 
 const {AboutPage} = require('../src/components/AboutPage.js')
 
-const outputDir = getArg('--output-dir') || './public'
+const outputDir = getArg('--output-dir') || './dist'
 
 if (process.argv[1].endsWith('bin/buildAbout.js')) {
   log('building About page', null)

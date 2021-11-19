@@ -4,7 +4,7 @@ const R = require('ramda')
 
 const { log, getFlag, getArg, pipeP } = require('../src/lib/util')
 
-const outputDir = getArg('--output-dir') || './public'
+const outputDir = getArg('--output-dir') || './dist'
 
 const { ensureDir, renderReact } = require('../src/lib/buildHtml.js')
 const { getArticles } = require('./buildArticles.js')

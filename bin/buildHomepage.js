@@ -1,7 +1,6 @@
 const fs = require('fs').promises
 const path = require('path')
 const R = require('ramda')
-const { parse } = require('marked')
 
 const { log, getFlag, getArg, pipeP } = require('../src/lib/util')
 

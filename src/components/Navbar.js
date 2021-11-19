@@ -6,8 +6,8 @@ export const Navbar = _ =>
     <div id="site-nav" data-move-to="body" data-move-to-max-width="960">
     <div data-toggle-class="open" data-target="#site-nav" className="close">&times;</div>
       <ul>
-        <li><a href="/#thoughts" data-toggle-class="open" data-target="#site-nav">thoughts</a></li>
-        <li><a href="/html/chicago-food-safety.html">food safety map</a></li>
+        <li><a href="/articles" data-toggle-class="open" data-target="#site-nav">thoughts</a></li>
+        <li><a href="/about.html">about me</a></li>
       </ul>
     </div>
     <a data-target="#site-nav" data-toggle-class="open" className="menu-toggle">menu</a>

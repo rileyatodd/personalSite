@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node bin/www",
     "watch": "node bin/www & node watch.js",
-    "build": "jade views/ --out ./public/html && cp ./public/html/index.html ./public & node bin/buildArticles.js --output-dir './public/articles'",
+    "build": "node bin/buildArticles.js --output-dir './public/articles' && node bin/buildHomepage.js",
     "publish": "gsutil rsync -x '.*food-safety-bundle.js$' -x '.*habit-bundle.js$' -R ./public gs://www.rileyatodd.com"
   },
   "dependencies": {},

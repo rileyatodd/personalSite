@@ -3,32 +3,43 @@ const path = require('path')
 const R = require('ramda')
 const { parse } = require('marked')
 
-const { log, getFlag, getArg, pipeP } = require('../src/lib/util')
+const { log, getFlag, getArg, pipeP, flatMapP } = require('../src/lib/util')
 
 const inputDir = getArg('--input-dir') || './articles'
 const outputDir = getArg('--output-dir') || './dist/articles'
 const renderUnpublished = getFlag('--render-unpublished')
 
-const { renderToDir, renderReact } = require('../src/lib/buildHtml.js')
+const { cleanDir, renderReact } = require('../src/lib/buildHtml.js')
 
 const {ArticlePage} = require('../src/components/ArticlePage.js')
 const {ArticleIndex} = require('../src/components/ArticleIndex.js')
+
+if (process.argv[1].endsWith('bin/buildArticles.js')) {
+  log('building articles', null)
+  build({ outputDir }).then(_ => process.exit(0))
+}
 
 let articles = getArticles()
 
 function build({ outputDir }) {
   return pipeP(
-    renderToDir({ outputDir, 
-                  render: article => renderReact(ArticlePage, {article}),
-                  getData: getArticles }),
-    _ => articles,
-    as => fs.writeFile(path.join(outputDir, 'index.html'),
-                       renderReact(ArticleIndex, {articles: as})))
+    cleanDir(outputDir),
+    _ => Promise.all([buildArticles(), buildIndex()]),
+    ([ articles, index ]) => articles.concat(index),
+    flatMapP(([ name, output ]) => fs.writeFile(path.join(outputDir, name), 
+                                                output)))
 }
 
-if (process.argv[1].endsWith('bin/buildArticles.js')) {
-  log('building articles', null)
-  build({ outputDir }).then(_ => process.exit(0))
+function buildArticles() {
+  return pipeP(
+    articles,
+    flatMapP(article => [article.outputName, renderReact(ArticlePage, {article})]))
+}
+
+function buildIndex() {
+  return pipeP(
+    articles,
+    articles => ['index.html', renderReact(ArticleIndex, {articles})])
 }
 
 function getArticles() {

@@ -11,15 +11,6 @@ require('@babel/register')({presets: [require.resolve('@babel/preset-react'),
 
 const { pipeP, flatMapP } = require('./util.js')
 
-function renderToDir({ outputDir, getData, render }) {
-  return pipeP(cleanDir(outputDir),
-               getData,
-               flatMapP(data => pipeP(render(data), output => R.mergeRight(data, {output}))),
-               flatMapP(data => fs.writeFile(
-                                  path.join(outputDir, data.fileName.replace('.md', '.html')), 
-                                  data.output)))
-}
-
 function cleanDir(outputDir) {
   return fs.access(outputDir)
            .then(_ => fs.rmdir(outputDir, { recursive: true }))
@@ -35,4 +26,4 @@ function renderReact(component, props) {
   return renderToStaticMarkup(React.createElement(component, props))
 }
 
-module.exports = { renderToDir, cleanDir, ensureDir, renderReact }
+module.exports = { cleanDir, ensureDir, renderReact }

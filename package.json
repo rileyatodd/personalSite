@@ -10,7 +10,8 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "cuttlebelle": "^1.0.0-alpha.76",
+    "@babel/preset-react": "^7.16.0",
+    "@babel/register": "^7.16.0",
     "filewatcher": "^3.0.1",
     "jade": "~1.9.2",
     "marked": "^0.3.19",

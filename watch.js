@@ -3,6 +3,7 @@ var exec = require('child_process').exec
 
 filewatcher.add('views')
 filewatcher.add('articles')
+filewatcher.add('src/components/')
 
 filewatcher.on('change', () => {
   exec("npm run build", (err, stdout, stderr) => {

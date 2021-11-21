@@ -1,0 +1,6 @@
+config:
+  aws:region: us-east-1
+  aws:profile: rileyatodd.com
+  infra:certificateArn: arn:aws:acm:us-east-1:602267033141:certificate/eb21177a-cb36-4f83-8e07-f8a8c6243c8e
+  infra:envName: prod
+  infra:uiDomain: rileyatodd.com

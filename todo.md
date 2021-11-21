@@ -1,5 +1,4 @@
 # Life
-- switch co-hatch payment to business cc
 
 # Site
 - investigate cloudflare hosting

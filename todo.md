@@ -1,5 +1,4 @@
 # Life
-- write letter to healthcare marketplace
 - switch co-hatch payment to business cc
 
 # Site

@@ -11,7 +11,7 @@ export const Head = ({ title })  =>
     <meta name="description" content="Personal Website of Riley A Todd" />
     <meta name="author" content="Riley A. Todd" />
     <meta name="robot" content="index, follow" />
-    <link rel="shortcut icon" href="/favicon.ico?v=2" />
+    <link rel="shortcut icon" href="/favicon.ico?v=3" />
     <script src="/javascripts/index.js" />
   </head>
 

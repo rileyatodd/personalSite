@@ -13,7 +13,7 @@
     "@babel/preset-react": "^7.16.0",
     "@babel/register": "^7.16.0",
     "filewatcher": "^3.0.1",
-    "marked": "^0.3.19",
+    "marked": "^4.0.10",
     "node-static": "^0.7.9",
     "ramda": "^0.27.1",
     "react": "^17.0.2",
